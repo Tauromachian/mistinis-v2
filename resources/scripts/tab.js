@@ -89,16 +89,35 @@ document.querySelectorAll(".tablinks").forEach((tab, index) => {
   }
 });
 function openCity(evt, raceName) {
-  console.log(raceName);
   let i;
   const tabcontent = document.getElementsByClassName("tabcontent");
+
+  tabcontent.namedItem;
+  let indexOfSelectedContent = findIndexOfSelectedTabContent(
+    raceName,
+    tabcontent
+  );
+
   for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
+    // tabcontent[i].style.display = "none";
+    setSliderPosition(tabcontent[i], indexOfSelectedContent);
   }
   const tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(raceName).style.display = "block";
+  // document.getElementById(raceName).style.display = "block";
   evt.currentTarget.className += " active";
+}
+
+function findIndexOfSelectedTabContent(id, tabs) {
+  for (i = 0; i < tabs.length; i++) {
+    if (tabs[i].id === id) return i;
+  }
+}
+
+function setSliderPosition(slide, currentPlace) {
+  const amountToMove = currentPlace * 100;
+  slide.style.transform = `translateX(-${amountToMove}%)`;
+  console.log(slide);
 }

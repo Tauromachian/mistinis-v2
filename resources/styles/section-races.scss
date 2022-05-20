@@ -3,7 +3,14 @@
   position: relative;
   height: fit-content;
   padding: 0 5px;
+
+  .tabs-content-wrapper {
+    overflow: hidden;
+    display: flex;
+  }
+
   .tab {
+    transition: all 3s;
     position: absolute;
     display: flex;
     flex-wrap: wrap;
@@ -29,10 +36,12 @@
 
   /* Style the tab content */
   .tabcontent {
-    display: none;
+    transition: all 1s ease;
     padding: 6px 12px;
     border-top: none;
     width: 100%;
+    flex: 0 0 100%;
+    position: relative;
 
     img {
       position: absolute;
