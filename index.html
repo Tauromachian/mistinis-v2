@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./dist/main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/05c7d53cc7.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <section class="section-hero" id="section-hero">
+      <header>
+        <nav id="navbar-big-screens">
+          <ul>
+            <li><a class="nav-links" href="#section-hero">Pagrindis</a></li>
+            <li><a class="nav-links" href="#section-history">Istorija</a></li>
+            <li>
+              <a class="nav-links" href="#section-races-carousel">Rasės</a>
+            </li>
+            <li><a class="nav-links" href="#section-servers">Galerija</a></li>
+            <li><a class="nav-links" href="#footer">Kontaktai</a></li>
+          </ul>
+        </nav>
+        <div id="navbar-small-screens">
+          <button
+            id="modal-open-button"
+            class="modal-open-button"
+            @click="openModal"
+          >
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="modal">
+            <nav class="modal-nav">
+              <ul class="modal-links">
+                <li><a class="nav-links" href="#section-hero">Pagrindis</a></li>
+                <li>
+                  <a class="nav-links" href="#section-history">Istorija</a>
+                </li>
+                <li>
+                  <a class="nav-links" href="#section-races-carousel">Rasės</a>
+                </li>
+                <li>
+                  <a class="nav-links" href="#section-servers">Galerija</a>
+                </li>
+                <li><a class="nav-links" href="#footer">Kontaktai</a></li>
+              </ul>
+            </nav>
+            <button
+              id="modal-close-button"
+              class="modal-close-button"
+              @click="closeModal"
+            >
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+        </div>
+      </header>
+      <div class="footer-content">
+        <img id="logo" src="./resources/images/logo.png" alt="" />
+        <h5>
+          Serverje žaidžia: <span style="font-weight: bold">25 žaidėjai</span>
+        </h5>
+        <div id="discord"><button>Discord</button></div>
+      </div>
+    </section>
+
+    <section id="section-history" class="section-history container">
+      <div>
+        <h1>Istorija</h1>
+        <p>
+          Žmonijai išnykus, mistiškai pradeda formuotis naujas pasaulis kitoje
+          visatos erdvėje. Ten užsimezgusi gyvybė buvo gana primityvi. Ne, tai
+          nebuvo vienaląsčiai organizmai nesugebantys mąstyti daugiau negu to
+          reikia išgyvenimui, tačiau apie savo planetos pavadinimą jie net
+          nemąstė, jiems ji buvo mistiška <br />
+          ir neištirta, dėl to visi ją vadino paprastai -
+          <span style="font-weight: bold">Mistinis pasaulis</span>.<br />
+          Šis pasaulis susidarė iš 4 bendruomenių-rasių išsibarsčiusių jame.
+          Šios rasės gyveno atskiruose žemynuose ir puoselėjo savo miestelius.
+          Apsilankius vienos ar kitos rasės gyvenamosiose vietose, galima buvo
+          pamatyti unikalius, išskirtinius statinius atitinkančius rasės
+          tradicijas, gabumus ir gyvenimo būdą. Mistinio pasaulio gyventojai
+          turėjo tikslą būti geriausiems ir stengėsi bendradarbiauti vieni su
+          kitais tam, kad kiekvieni iš jų sukurtų jaukų, įdomų, savo neįtikėtiną
+          rasės miestą. Taigi, klestinčių rasių pavadinimai: Haflingai,
+          Tabaksiai, Uritonai ir Minotaurai.
+        </p>
+      </div>
+    </section>
+
+    <!-- The slider code should go here. By the way don't place a lot of attention on the language, needless to say, it's not english lol -->
+
+    <!-- Indeed it isn't -->
+
+    <section id="section-races-carousel" class="section-races-carousel">
+      <div class="tab">
+        <a id="tab-button-halfingai" class="tablinks active"> Halfingai </a>
+        <span>|</span>
+        <a id="tab-button-uritonai" class="tablinks"> Uritonai </a>
+        <span>|</span>
+        <a id="tab-button-tabaksiai" class="tablinks"> Tabaksiai </a>
+        <span>|</span>
+        <a id="tab-button-minotaurai" class="tablinks"> Minotaurai </a>
+      </div>
+      <div id="tab-halfingai" class="tabcontent">
+        <img src="./resources/images/rases_img/Haflingas.png" alt="" />
+        <div class="tabcontent-content container">
+          <div class="tab-description">
+            <h2>Halfingai</h2>
+            <p>
+              Haflingai yra draugiškiausia bendruomenė su kuriais galite
+              susidurti, kilę iš sausos žinduolių. Jie yra nerūpestingi, drąsus
+              ir darbštūs, dauguma jų patenkinti savo gyvenimu, kupinu paprastų
+              malonumų. Bendrame rasių tarpe jie gerai žinomi ne tik dėl savo
+              geranoriškumo ir draugiškumo, o taip pat gerai atpažįstami dėl
+              savo žemo ūgio. Kol jie turės puikią kompaniją ir laisvę siekti
+              savo svajonių, Haflingas bus laimingas. Haflingai labiausiai
+              vertina dvasines vertybes ir yra naiviai geri, ši savybė dažnai
+              jiems ne į naudą, tačiau jie turi daugumą privalumų, vieni iš jų-
+              puikus sugebėjimas vystyti pramonę ir savo kraštų aprūpinimą
+              žaliavomis ir greitas jų transportavimas, nes Haflingai greičiausi
+              iš visų Mistinio pasaulio rasių. Haflingų šūkis: -Ūgis neturi
+              reikšmės, reikšmė - valioje!
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="tab-uritonai" class="tabcontent">
+        <img src="./resources/images/rases_img/Uritonas.png" alt="" />
+        <div class="tabcontent-content container">
+          <div class="tab-description">
+            <h2>Uritonai</h2>
+            <p>
+              Uritonai yra iš vandens bakterijų išsivystę humanoidai, kurių
+              organizmas ir kūnas prisitaikęs prie povandeninio gyvenimo sąlygų,
+              mėlyna oda ir spalvingi plaukai Uritonų išskirtinis bruožas tarp
+              rasių. Jie yra ne tik vandenyno gelmių, bet, jei jų paklaustumėte,
+              viso pasaulio gynėjai. Nors yra tam tikra arogancija, kurios
+              didžioji dalis kyla iš tokio izoliuoto gyvenimo, jie tikrai saugo
+              tuos, kuriems reikia pagalbos. Tai reiškia, kad jų arogantiškas ir
+              kartais per daug sąžiningas, teisingas, visas taisykles
+              atitinkantis elgesys kai kuriuos gali atgrasinti, tačiau Uritonams
+              tai priimtina ir nepaisant to, jie pasiruošę padėti visiems
+              sunkioje situacijoje, jie neatstumia kitų. Uritonai tiesiog nėra
+              pripratę prie gyvenimo kuris vyksta už jų giliavandenių namų ribų.
+              Dėl tokios Uritonų rasės ypatybės jie gali kvėpuoti po vandeniu ir
+              matyti gilioje tamsoje tai jiems leidžia gyventi savo atskirame
+              vandens pasaulyje. Uritonų šūkis: -Nespręsk apie knygą, iš jos
+              viršelio. Arba, -Atsiminus savo blogumą, žiūrėk į kitų gerumą.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="tab-tabaksiai" class="tabcontent">
+        <img src="./resources/images/rases_img/Tabaksis.png" alt="" />
+        <div class="tabcontent-content container">
+          <div class="tab-description">
+            <h2>Tabaksiai</h2>
+            <p>
+              Tabaksiai yra iš žinduolių-kačių išsivystę humanoidai, kurių
+              smalsumas toks pat stiprus kaip ir tikrosios katės, tačiau jų dar
+              vienas privalumas - aukštas intelektas. Tabaksiai nukeliaus
+              neįtikėtinai toli, jei jų troškimas nukeliauti. Jie be galo
+              užsispyrę ir savo tikslų laikosi. Tabaksiai linkę laikytis savo
+              tradicijų ir nuomonės, jog protiniai sugebėjimai yra progreso
+              variklis, jie nelinkę kariauti ir užkariauti kitų kraštų be
+              priežasties, viskas stengiamasi išspręsti diplomatijos pagalba,
+              dėl to jiems dažniausiai nusišypso sėkmė. Tabaksių šūkis:
+              -Gyvenime reikia tik tiek aukso, kad išgyventum, bet kas daugiau,
+              yra laikoma nereikalinga našta.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="tab-minotaurai" class="tabcontent">
+        <img src="./resources/images/rases_img/Minotauras.png" alt="" />
+        <div class="tabcontent-content container">
+          <div class="tab-description">
+            <h2>Minotaurai</h2>
+            <p>
+              Minotaurai yra į galingus stumbrus panašūs humanoidai, turintys
+              stiprų agresijos potraukį ir tvirtą sąžinę. Šie du, iš pirmo
+              žvilgsnio prieštaraujantys aspektai reiškia, kad Minotauras yra
+              karinga asmenybė, linkusi bent kokia kaina ginti savo teritoriją.
+              Ne visi Minotaurai sugeba atsispirti savo smarkesnių potraukių
+              pagundai, tačiau tie, kurie puikiai susivaldo, yra gerbiami, o tai
+              atsispindi jų visuomenėje ir kasdieniame gyvenime. Įgūdžių
+              tobulinimas ir technikų įvaldymas teikia Minotaurams didelį
+              malonumą ir galbūt yra vienas iš svarbiausių dalykų, padedančių
+              atsispirti kitiems potraukiams. Minotaurai labiausiai agresyvūs
+              rasių tarpe, dėl to kitos rasės be reikalo su jais nejuokauja,
+              taip pat dėl tokio gyvenimo būdo jie yra stipriausi ir
+              ištvermingiausi iš rasių, dėl to linkę viską gauti jėga. Minotaurų
+              šūkis: -Kas turi jėgą, tas ir tiesą - kieno galia, to ir valia.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <iframe src="http://95.217.88.120:8124/" frameborder="0"></iframe>
+
+    <section id="section-servers" class="section-servers">
+      <div class="title-container">
+        <h1>Vaizdai iš serverio</h1>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-content">
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/973/200/300"
+              alt="1"
+            />
+          </div>
+
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/974/200/300"
+              alt="2"
+            />
+          </div>
+
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/975/200/300"
+              alt="3"
+            />
+          </div>
+
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/976/200/300"
+              alt="4"
+            />
+          </div>
+
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/977/200/300"
+              alt="5"
+            />
+          </div>
+
+          <div class="slider-single">
+            <img
+              class="slider-single-image"
+              src="https://picsum.photos/id/978/200/300"
+              alt="6"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer">
+      <div class="container footer-content">
+        <div class="footer-content-text">
+          <h2>Turi klausimų?</h2>
+          <h3>Susiek su mumis!</h3>
+          <ul>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              MistinisPasaulis
+            </li>
+            <li><i class="fa-brands fa-instagram"></i>MistinisPasaulis</li>
+            <li>
+              <i class="fa-brands fa-discord"></i>
+              MistinisPasaulis
+            </li>
+            <li>
+              <i class="fa-brands fa-facebook"></i>
+              MistinisPasaulis
+            </li>
+          </ul>
+          <div><button>Anketa</button></div>
+        </div>
+        <img
+          src="./resources/images/rases_img/Pacaskurisapacioj.png"
+          alt="An ugly ass goblin"
+        />
+      </div>
+      <div class="copyright">
+        <p>Visos teisės saugomos @MistinisPasaulis 2022</p>
+      </div>
+    </footer>
+  </body>
+</html>
