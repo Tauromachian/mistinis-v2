@@ -54,3 +54,16 @@ const liList = document.querySelectorAll(".modal-links li").forEach((li) => {
     li.addEventListener("click", closeModal);
   }
 });
+
+const navLinks = document.getElementsByClassName("nav-links");
+for (const link of navLinks) {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    scrollToPosition(link.getAttribute("href"));
+  });
+}
+
+function scrollToPosition(positionId) {
+  const elmnt = document.getElementById(positionId.split("#").pop());
+  elmnt.scrollIntoView({ behavior: "smooth" });
+}
