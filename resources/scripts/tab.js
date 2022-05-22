@@ -11,6 +11,12 @@
   let dist = 0; // distance traveled by touch point
   let touchobj = null; // Touch object holder
 
+  const previousSliderButton = document.getElementById("previous");
+  const nextSliderButton = document.getElementById("next");
+
+  previousSliderButton.addEventListener("click", () => slideLeft(tabsIds));
+  nextSliderButton.addEventListener("click", () => slideRight(tabsIds));
+
   section.addEventListener(
     "touchstart",
     function (e) {
@@ -37,6 +43,8 @@
     false
   );
 })();
+
+let activeSlideIndex = 0;
 
 function slideLeft(tabsIds) {
   const index = getIndexOfNextTabToActivate(tabsIds, "left");
@@ -88,6 +96,7 @@ document.querySelectorAll(".tablinks").forEach((tab, index) => {
     });
   }
 });
+
 function changeSlider(evt, raceName) {
   let i;
   const tabcontent = document.getElementsByClassName("tabcontent");
@@ -119,5 +128,4 @@ function findIndexOfSelectedTabContent(id, tabs) {
 function setSliderPosition(slide, currentPlace) {
   const amountToMove = currentPlace * 100;
   slide.style.transform = `translateX(-${amountToMove}%)`;
-  console.log(slide);
 }
