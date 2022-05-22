@@ -84,11 +84,11 @@ const tabsLinks = [
 document.querySelectorAll(".tablinks").forEach((tab, index) => {
   if (tab) {
     tab.addEventListener("click", (event) => {
-      openCity(event, tabsLinks[index][tab.id]);
+      changeSlider(event, tabsLinks[index][tab.id]);
     });
   }
 });
-function openCity(evt, raceName) {
+function changeSlider(evt, raceName) {
   let i;
   const tabcontent = document.getElementsByClassName("tabcontent");
 
