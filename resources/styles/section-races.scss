@@ -34,6 +34,22 @@
     color: #ad00ff;
   }
 
+  #previous,
+  #next {
+    position: absolute;
+    z-index: 200;
+    top: 50%;
+    cursor: pointer;
+  }
+
+  #previous {
+    left: 40px;
+  }
+
+  #next {
+    right: 40px;
+  }
+
   /* Style the tab content */
   .tabcontent {
     transition: all 1s ease;
