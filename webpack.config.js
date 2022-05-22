@@ -1,6 +1,7 @@
 const path = require("path");
 
 module.exports = {
+  mode: "production",
   entry: "./resources/index.js",
   resolve: {
     alias: {
@@ -14,7 +15,6 @@ module.exports = {
     assetModuleFilename: "[name][ext][query]",
     clean: true,
   },
-  mode: "production",
   module: {
     rules: [
       {
